@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <title>NEZ Nástroj</title>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.mindop.sk/">
+        <img src="src/logo_MD_SR_SK.png" width="112" height="28">
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item js-modal-trigger" data-target="modal-js-help">Ako s nástrojom pracovať?</a>
+        <a class="navbar-item js-modal-trigger" data-target="modal-js-about">O projekte</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <section class="hero is-medium is-dark" id="topsection">
+    <div class="hero-body is-flex">
+      <p class="title">Nástroj na vytváranie NEZ</p>
+      <p class="subtitle">Experimentálny nástroj MD SR</p>
+      <div class="quote">
+        <p class="quote">Nízkoemisná zóna (NEZ) je oblasť, do ktorej je obmedzený alebo zakázaný vjazd určitých typov
+          vozidiel. Cieľom NEZ je zlepšiť kvalitu ovzdušia a znížiť emisie znečisťujúcich látok, akými sú oxid dusičitý
+          a pevné častice. Tento nástroj slúži na vizualizíciu dostupných údajov, ktoré umožní informované vytváranie
+          NEZ.</p>
+        <div class="buttons">
+          <button class="button is-primary js-modal-trigger" data-target="modal-js-nez">Viacej informácií o NEZ</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-fullheight is-light" id="main">
+    <div class="hero-body is-flex">
+      <p class="subtitle">Čo nástroj obsahuje?</p>
+      <div class="columns">
+        <div class="column" id="leftC">
+          <div class="textpart">
+            <p class="highlight">Údaje o kvalite ovzdušia</p>
+            <p>Umožňujú pochopiť súčasnú úroveň znečistenia, identifikovať ohniská znečistenia a robiť informované
+              rozhodnutia, ktoré prispievajú k zlej kvalite ovzdušia.</p>
+          </div>
+          <div class="imgpart is-flex">
+              <img src="src/leftC.jpg" draggable="false" ondragstart="return false;">
+          </div>
+        </div>
+        <div class="column" id="midC">
+          <div class="textpart">
+            <p class="highlight">Mapa chránených oblastí a území</p>
+            <p>Zabezpečuje, že snahy o znižovanie znečistenia ovzdušia sa realizujú spôsobom, ktorý minimalizuje
+              negatívne vplyvy na tieto oblasti a zachováva ich ekologickú integritu.</p>
+          </div>
+          <div class="imgpart is-flex">
+              <img src="src/midC.jpg" draggable="false" ondragstart="return false;">
+          </div>
+        </div>
+        <div class="column" id="rightC">
+          <div class="textpart">
+            <p class="highlight">Mapa dopravného zaťaženia</p>
+            <p>Umožňuje presné vyhodnotenie skutočne produkovaných emisií, čo umožňuje účinnú implementáciu opatrení na
+              zníženie úrovne znečistenia.</p>
+          </div>
+          <div class="imgpart is-flex">
+              <img src="src/rightC.jpg" draggable="false" ondragstart="return false;">
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="button is-primary is-large">
+          <a class="js-modal-trigger runapp" data-target="modal-js-app">Spustiť nástroj</a>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Nástroj na vytváranie NEZ</strong> vytvoril <a href="https://alistiq.com">Alistiq, s.r.o.</a><br />
+        Zdrojový kód je licencovaný <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+      </p>
+      <p>
+        Kontakt: <a href="mailto:filip.nguyen@alistiq.com">filip.nguyen@alistiq.com</a>
+      </p>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal-js-app">
+    <div class="modal-background"></div>
+    <div class="modal-card modal-app">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Nástroj na vytváranie NEZ</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+      </section>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-js-help">
+    <div class="modal-background"></div>
+    <div class="modal-card modal-app">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Ako s nástrojom pracovať</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <img src="src/legend2.jpg">
+        <p><strong>Legenda:</strong></p>
+        <ul>
+          <li>A: Viditeľnosť vrstvy</li>
+          <li>B: Rozbaliť vrstvu</li>
+          <li>C: Zobraziť okno s vrstvami</li>
+          <li>D: Zobraziť legendu</li>
+          <li>E: Zobraziť tabuľkové dáta</li>
+          <li>F: Pás s nástrojmi na kreslenie</li>
+          <li>G: Mierka mapy</li>
+          <li>H: Priblížiť mapu</li>
+          <li>I: Vyhľadať adresu</li>
+        </ul>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button">Zatvoriť</button>
+      </footer>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-js-about">
+    <div class="modal-background"></div>
+    <div class="modal-card modal-info">
+      <header class="modal-card-head">
+        <p class="modal-card-title">O projekte</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <p>
+          Experiment v rámci projektu "PoC HD Mapy" je zameraný na riešenie lokálnych emisií z dopravy a snaží sa znížiť dopad vozidiel na kvalitu
+          ovzdušia. Cieľom je overiť dostupnosť a použiteľnosť údajov potrebných na vytvorenie nástroja pre
+          zjednodušenie tvorby a implementácie nízkoemisných zón. Nástroj má zaručiť lepšiu kvalitu ovzdušia a zároveň
+          obslužnosť a prístupnosť pre rezidentov. Taktiež motivuje obyvateľov, aby obmedzili vjazd do zóny vo vozidlách
+          so spaľovacím motorom a uplatňovali environmentálny prístup k doprave. Prínosom je zníženie koncentrácie
+          lokálnych emisií a vytvorenie zdravšieho prostredia pre obyvateľov týchto zón.
+        </p>
+        <p><strong>Zdroje údajov:</strong></p>
+        <ul>
+          <li>Mapa dopravného zaťaženia: HERE Technologies</li>
+          <li>Údaje o kvalite vzduchu: INSPIRE PD 4,01 Informácie o kvalite okolitého ovzdušia</li>
+          <li>Mapa cestnej siete: OpenStreetMap</li>
+          <li>Lokalizácia chránených oblastí: INSPIRE PD 25,01 Lokalizácia chránených oblastí (článok 6 a 7) Natura 2000</li>
+          <li>Databáza chránených území: INSPIRE PD 45,01 CDDA Spoločná databáza chránených území</li>
+          <li>Digitálna mapa SR: OpenStreetMap</li>
+        </ul>
+        <p>Spracovanie mapových podkladov: ArcGIS Online</p>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button">Zatvoriť</button>
+      </footer>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-js-nez">
+    <div class="modal-background"></div>
+    <div class="modal-card modal-info">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Nízkoemisné zóny</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <p>Jednou z možností, ako zaviesť väčší počet čistejších vozidiel a znížiť počet starších, viac znečisťujúcich
+          vozidiel na cestnej sieti, je zavedenie nízkoemisnej zóny (NEZ). NEZ je vymedzená oblasť, do ktorej môžu
+          vstúpiť len určené vozidlá spĺňajúce určité emisné kritériá alebo normy, napr. EURO normy. Podľa § 2 písm. r)
+          zákona o ovzduší, je NEZ územie obce, časti obce alebo mestskej časti, v ktorej je regulovaná prevádzka
+          cestných motorových vozidiel podľa § 9 ods. 3 s cieľom udržať alebo zlepšiť kvalitu ovzdušia. Územie obce
+          definuje zákon v § 2 zákona č. 369/1990 Zb. o obecnom zriadení (ďalej aj len ako „zákon o obecnom zriadení“)
+          ako územný celok, ktorý tvorí jedno katastrálne územie alebo viac katastrálnych území. Územie obce sa môže
+          členiť na jednotlivé časti obce. </p>
+        <p>
+          Aj keď sa vďaka NEZ objemy dopravy nevyhnutne nemenia, vozidlá, ktoré sa pohybujú v danej oblasti, sú
+          ekologičtejšie s nižšími emisiami, čo priamo vedie k zlepšeniu kvality ovzdušia. Napríklad nízkoemisné zóny
+          pre nákladné vozidlá už boli úspešne zavedené a fungujú už mnoho rokov napríkald v Štokholme, Göteborgu, Malmö
+          a Lunde, kde viedli k zlepšeniu úrovne kvality ovzdušia.
+        </p>
+        <p>
+          Prvé nízkoemisné zóny vznikli v európskych mestách, aby riešili nebezpečne vysoké znečistenie ovzdušia a jeho
+          zdravotné dopady na obyvateľov, pričom úplne prvá NEZ bola vytvorená vo Švédsku v roku 1996. Cieľom švédskej
+          NEZ bolo zlepšiť kvalitu ovzdušia obmedzením vysoko znečisťujúcich, ťažkých úžitkových vozidiel od jazdy v
+          centrách miest (alebo ich spoplatňovanie) – mnohé NEZ však teraz zahŕňajú aj ľahké úžitkové vozidlá a osobné
+          autá. Čoraz viac NEZ dopĺňajú politické iniciatívy, ktoré pomáhajú dosahovať ciele nad rámec zlepšenia kvality
+          ovzdušia, ako je zníženie dopytu po jazde, zníženie hluku, zvýšenie bezpečnosti pre cyklistov a chodcov a
+          stimulovanie verejnej a zdieľanej dopravy.
+        </p>
+        <p>
+          Existuje niekoľko štúdií, ktoré sa vykonali pre NEZ, ale závery o ich účinkoch sa líšia. Výzvy v týchto
+          hodnoteniach sú mnohé a napríklad použitie nesprávnych emisných faktorov pre dieselové vozidlá bolo jednou z
+          dôležitých výziev pre modelovacie štúdie. Pre štúdie merania kvality ovzdušia je ťažké oddeliť účinok NEZ od
+          iných zavedených opatrení. To však neznamená, že NEZ nemali vplyv. Existujú dôkazy, ktoré ukazujú, že NEZ mali
+          vplyv na štruktúru vozidiel na cestách, a tým znižovali emisie – NEZ sa považujú za účinné pre NO2, CO2 a iné
+          výfukové plyny a látky, ak sú zamerané na dostatočne veľkú časť vozového parku alebo sú dostatočne prísne. Na
+          zníženie znečistenia ovzdušia je potrebných niekoľko opatrení a NEZ sú jedným z užitočných nástrojov, ktoré
+          majú mestá k dispozícii.
+        </p>
+        <p>
+          Zdroje:
+        <ul>
+          <li>Airuse. 2016. Low Emissions Zones In Northern And Central Europe. LIFE11 /ENV/ES/584.</li>
+          <li>HAUSENBLAS, M. 2012. 5 star Open Data.</li>
+          <li>REICHMUTH, D. 2021. Zero Emissions Zones: A tool to target benefits of vehicle electrification to
+            communities that need it most. The Greenlining Institute.</li>
+        </ul>
+        </p>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button">Zatvoriť</button>
+      </footer>
+    </div>
+  </div>
+
+  <script src="events.js"></script>
+</body>
+
+</html>

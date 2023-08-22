@@ -1,0 +1,51 @@
+:root{
+	--bg:#EFEFEF;
+	--primary:#00507F;
+	--secondary:#127AB7;
+	--tertiary:#CD2C2B;
+	--mdsrgrey:#515151;
+	--mdsrtitle:#333333;
+	--titleblue:#006199;
+}
+html,body{background-color: var(--bg);}
+body{font-family: 'Source Sans 3', sans-serif;}
+
+section.hero.is-medium.is-dark{background-color: #000003;}
+section.hero.is-light{background-color: var(--bg);}
+section#topsection{background-image: url(src/layer3.png);background-repeat: no-repeat;background-position: center;background-size: 70%;}
+section#topsection p{text-align: center;}
+section#topsection div.hero-body{flex-direction: column;align-items: center;}
+section#main div.hero-body{flex-direction: column;align-items: center;justify-content: center;}
+section#main div.columns{width:100%;}
+section#main div.buttons{margin-top: 40px;}
+section#main p.subtitle{font-weight: 700;color:var(--titleblue);text-transform: uppercase;}
+
+div.quote{margin-top:20px}
+div.quote div.buttons{justify-content: center;margin-top:20px}
+div.textpart p{text-align: justify;}
+div.columns{gap:20px}
+div.imgpart{width:100%;justify-content: center;}
+div.imgpart img{width:400px;margin-top: 20px;transition: 0.9s;filter: saturate(0.5);}
+div.imgpart img:hover{transform: scale(1.04);cursor:crosshair;filter: saturate(1);}
+div#app{display:none;}
+div.modal-card.modal-info{width:auto;max-width: 1000px;}
+div.modal-card.modal-app{width:auto;max-width: calc(100vw - 60px);}
+div#modal-js-app div.modal-card.modal-app{width:100%;height:100%}
+section.modal-card-body p{text-align: justify;padding:8px 0}
+section.modal-card-body img{width: 850px;}
+section.modal-card-body iframe{width: 100%;height:100%}
+section.modal-card-body ul{margin-left: 20px;}
+
+button.is-primary{background-color: var(--secondary)!important;transition: 0.3s;}
+button.is-primary:hover{background-color: var(--primary)!important;}
+footer{background-color: #EDF5FA!important;}
+p.quote{max-width: 40vw;}
+p.highlight{text-align: center!important; color:var(--titleblue);font-weight: 700;}
+
+
+@media (max-width: 1024px) {
+	p.quote {
+		max-width: unset;
+	}
+}
+
